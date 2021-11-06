@@ -42,4 +42,11 @@ pokemonRepository.add({
   type: ['Electric']
 });
 
+let text = (' ')
+let space = ('<br>')
+
 console.log(pokemonRepository.getAll());
+
+pokemonRepository.getAll().forEach(function(pokemon){
+  document.write(pokemon.name + text + 'height:' + pokemon.height + text + 'type:' + pokemon.type + space);
+});

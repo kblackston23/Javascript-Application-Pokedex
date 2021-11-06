@@ -3,7 +3,7 @@ let pokemonRepository = (function () {
     {
       name:'Eevee',
       height:1.5,
-      type: ['Normal']
+      type: ['normal']
     },
     {
       name:'Meganium',
@@ -39,7 +39,7 @@ let pokemonRepository = (function () {
 pokemonRepository.add({
   name:'Pikachu',
   height:1.1,
-  type: ['Electric']
+  type: ['electric']
 });
 
 let text = (' ')

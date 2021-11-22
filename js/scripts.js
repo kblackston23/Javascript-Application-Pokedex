@@ -96,6 +96,14 @@ let pokemonRepository = (function () {
 
     modal.appendChild(imgElement);
 
+    modalContainer.appendChild(modal);
+    modalContainer.classList.add('is-visible');
+
+    function hideModal() {
+      let modalContainer = document.querySelector('#modal-container');
+      modalContainer.classList.remove('is-visible');
+      }
+
     window.addEventListener('keydown', (e) => {
       let modalContainer = document.querySelector('#modal-container');
       if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
@@ -109,16 +117,7 @@ let pokemonRepository = (function () {
         hideModal();
     }
     });
-
-    modalContainer.appendChild(modal);
-    modalContainer.classList.add('is-visible');
 }
-
-
-function hideModal() {
-  let modalContainer = document.querySelector('#modal-container');
-  modalContainer.classList.remove('is-visible');
-  }
 
   return {
     add: add,
@@ -126,7 +125,6 @@ function hideModal() {
     addListItem: addListItem,
     loadList: loadList,
     loadDetails: loadDetails,
-    showDetails: showDetails
   };
 })();
 

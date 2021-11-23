@@ -7,7 +7,6 @@ body{
 
 div {
   margin: auto;
-  width: 210px;
 }
 
 #modal-container {
@@ -18,15 +17,15 @@ div {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
   z-index: 999;
   overflow: auto;
   display: none;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #modal-container.is-visible {
-  display: block;
+  display: inline-block;
 }
 
 .modal {
@@ -35,24 +34,29 @@ div {
   box-sizing: border-box;
   background: lightblue;
   padding: 15px;
-  width: 100%;
-  max-width: 500px;
+  width: 40%;
   border-radius: 20px;
 }
 
 .modal-close {
-  float: right;
-  -webkit-appearance: none;
+  position: absolute;
+  top: 3%;
+  right: 31%;
   border: 0;
   background: none;
-  color: #777;
-  text-decoration: underline;
+  color: #fff;
+  width: 10%;
+}
+
+.modal-close:hover {
+  color: red;
+  background: none;
 }
 
 .modal h1 {
   margin-top: 0;
   color: #0066cc;
-  text-align: left;
+  text-align: center;
 }
 
 .modal p {
@@ -66,20 +70,20 @@ h1{
   color: #fff;
   background-color: transparent;
   font-family: 'Bebas Neue', cursive;
-  margin: auto;
-  padding-left: 45px;
+  text-align: center;
 }
 
 p {
   font-family: 'Bebas Neue', cursive;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 button {
   background-color: lightblue;
   color: #000;
   padding: 10px;
-  width: 180px;
+  margin-top: 10px;
+  width: 85%;
   height: 50px;
   font-family: 'Bebas Neue', cursive;
   font-size: 20px;
@@ -90,7 +94,24 @@ button:hover {
   background-color: gray;
 }
 
-ul {
-  list-style-type: none;
-  display: inline;
+.pokemon-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .pokemon-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .pokemon-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -8,7 +8,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>Pokedex!</title>
   </head>
-  <body>
+<body>
+<!--Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">
+      <img src="./img/pokedex_logo.webp" class="d-inline-block align-top" height="60" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" href="#">DO this!</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">OR this!</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Maybe this!</a>
+          </li>
+      </ul>
+      <form class="search-pokemon form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" id="myInput" type="text" placeholder="Search Pokemon..." aria-label="Search">
+          <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search
+          </button>
+      </form>
+  </div>
+</nav>
+
     <div>
       <h1>Pokedex!</h1>
       <ul class="pokemon-list"></ul>

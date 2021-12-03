@@ -9,10 +9,11 @@
     <title>Pokedex!</title>
   </head>
 <body>
+<header> </header>
 <!--Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand" href="#">
-      <img src="./img/pokedex_logo.webp" class="d-inline-block align-top" height="60" alt="">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="index.html">
+    <img src="img/pokedex.png" class="d-inline-block align-top" height="60" alt="Pokedex logo">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,13 +21,13 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-              <a class="nav-link" href="#">DO this!</a>
+              <a class="nav-link" href="#"> Your PokeLists!</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">OR this!</a>
+              <a class="nav-link" href="#">Create new PokeLists!</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#">Maybe this!</a>
+              <a class="nav-link" href="#">See newest Pokemon!</a>
           </li>
       </ul>
       <form class="search-pokemon form-inline my-2 my-lg-0">
@@ -37,10 +38,28 @@
   </div>
 </nav>
 
-    <div>
-      <h1>Pokedex!</h1>
-      <ul class="pokemon-list"></ul>
-      <div id="modal-container"></div>
+  <div>
+    <ul class="pokemon-list"></ul>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLive" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
       <script src="js/promise-polyfill.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

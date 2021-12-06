@@ -1,4 +1,4 @@
-# Simple-JS-Application
+# Pokedex
 POKEDEX APPLICATION
 Application with list of the first 150 Pokemon, including their height, weight and an image of them. Click on the Pokemon's name to see it's information! Includes a search bar to easily find the Pokemon you want.
 

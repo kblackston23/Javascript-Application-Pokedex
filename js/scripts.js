@@ -89,10 +89,15 @@ let pokemonRepository = (function() {
       '<p>' + 'Weight : ' + pokemon.weight + ' kg' + '</p>'
     );
 
+    let typesElement = $(
+      `<p> Type(s) : ${pokemon.types.map(p => p.type.name).join(', ')}</p>`
+    );
+
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
     modalBody.append(heightElement);
     modalBody.append(weightElement);
+    modalBody.append(typesElement);
 
     $('#exampleModalLive').modal();
   }
